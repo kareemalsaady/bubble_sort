@@ -2,24 +2,23 @@
 def bubble_sort
 # Setting up the array
 array = []
-puts "How many numbers in your array?"
+puts "How many phrases in your array?"
 n = gets.chomp
-puts "What are your numbers?"
+puts "What are your phrases?"
 n.to_i.times do |number|
-  number = gets.chomp.to_i
-  array << number
+  phrases = gets.chomp
+  array << phrases
 end
 p array
-z = n.to_i-1
 
 #iterations
-z.times do
+(n.to_i-1).times do
 i = 0
 j = 1
-z.to_i.times do |x,y|
+(n.to_i-1).times do |x,y|
   x = array [i]
   y = array [j]
-  s = x > y
+  s = x.length > y.length
   if s == true
     array[i]= y
     array[j]= x
